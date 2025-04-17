@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Your favourite music is here</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="">
+      <!-- Header -->
+      <div class="flex items-center space-x-8 justify-between fixed w-full top-0 left-0 z-50 px-4 py-2 bg-[#121212]">
+        <div class="flex items-center space-x-8 w-full justify-between">
+          <!-- logo -->
+          <a href="/" class=""><img src="/logo.png" class="w-8 h-8" /></a>
+          <!-- Home -->
+          <div class="space-x-2 flex items-center">
+            <a href="/" class="bg-[#1f1f1f] p-2 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
+              <img src="/home.png" class="w-6 h-6" />
+            </a>
+            <!-- Search -->
+            <div class="bg-[#1f1f1f] flex items-center w-full px-2 py-1.5 rounded-full shrink-0">
+              <div class="flex items-center w-full">
+                <img src="/search.png" class="w-6 h-6 opacity-70 mr-2" />
+                <input class="bg-transparent h-9 p-1 w-full focus:outline-0 text-white" type="text" placeholder="What do you want to play?" />
+              </div>
+              <a href="/" class="border-l border-white/30 pl-2" title="browse">
+                <img src="/browser.png" class="w-6 h-6 opacity-70 mr-2" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex items-center justify-end space-x-4">
+          <div class="flex items-center space-x-4">
+            <a href="#" class="font-medium text-base px-4 py-1 bg-white text-black rounded-full">Explore Premium</a>
+            <a href="#" class="font-medium text-base px-4 py-1 bg-white text-black rounded-full flex items-center space-x-1"
+              ><img src="/download.png" class="w-3.5 h-3.5" /> <span>Install App</span></a
+            >
+          </div>
+
+          <div class="relative inline-block">
+            <div class="relative dropdown">
+              <!-- Hidden checkbox to toggle dropdown -->
+              <input type="checkbox" id="menu-toggle" />
+
+              <!-- Your styled button as label -->
+              <label for="menu-toggle" class="space-x-4 w-11 h-11 border-4 border-white/10 rounded-full cursor-pointer inline-block">
+                <div class="font-medium bg-[#b49bc8] text-black w-9 h-9 rounded-full flex justify-center items-center">O</div>
+              </label>
+
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="/index.html">Logout</a>
+              </div>
+            </div>
+            <!-- Dropdown Menu -->
+          </div>
+        </div>
+      </div>
+
+      <!-- HeroSection -->
+      <div class="flex items-start p-2 mt-16 h-screen z-20">
+        <div class="w-[29%] bg-[#121212] rounded-xl p-2 space-y-8 h-screen fixed z-20">
+          <div class="flex items-center justify-between p-2">
+            <h2 class="text-white p-2">Your Library</h2>
+            <a href="#" class="hover:bg-white/5 rounded-full flex items-center justify-center shrink-0 w-8 h-8">
+              <img src="/plus.png" class="w-4 h-4 opacity-70" />
+            </a>
+          </div>
+
+          <!-- create your playlist -->
+
+          <div class="space-y-6">
+            <div class="space-y-5 bg-[#1F1F1F] p-4 rounded-md">
+              <div class="space-y-3">
+                <h2 class="text-white font-medium">Create your first playlist</h2>
+                <p class="text-white text-xs font-light">it's easy, we'll help you</p>
+              </div>
+              <a href="" class="bg-white text-black font-medium px-4 py-1.5 flex w-fit text-sm rounded-full">Create Playlist</a>
+            </div>
+            <!-- create your podcast -->
+            <div class="space-y-5 bg-[#1F1F1F] p-4 rounded-md">
+              <div class="space-y-3">
+                <h2 class="text-white font-medium">Let's find some podcasts to follow</h2>
+                <p class="text-white text-xs font-light">We'll keep you updated on new episodes</p>
+              </div>
+              <a href="" class="bg-white text-black font-medium px-4 py-1.5 flex w-fit text-sm rounded-full">Browse podcasts</a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap">
+            <a href="#" class="text-xs text-white/70 font-light pr-6 py-1">Legal</a>
+            <a href="#" class="text-xs text-white/70 font-light pr-6 py-1">Safety & Privacy Center</a>
+            <a href="#" class="text-xs text-white/70 font-light pr-6 py-1">Privacy Policy</a>
+            <a href="#" class="text-xs text-white/70 font-light pr-6 py-1">Cookies</a>
+            <a href="#" class="text-xs text-white/70 font-light py-1">About Ads</a>
+            <a href="#" class="text-xs text-white/70 font-light py-1">Accessibility</a>
+          </div>
+          <a href="#" class="text-sm text-white/70 font-light pr-6 py-1 border border-white flex items-center w-fit rounded-full px-2 space-x-2">
+            <img src="/language.png" class="w-4 h-4" /><span class="font-medium text-white">English</span></a
+          >
+        </div>
+
+        <!-- RightSide -->
+
+        <div class="w-[70%] pb-20 ml-[30%] bg-gradient-to-b from-[#212121] to-black rounded-xl p-6 space-y-20 right-0 z-20">
+          <!-- Trending Songs Section -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="text-2xl text-white font-medium">Trending Songs</h2>
+              <h2 class="text-sm text-white/50 font-medium">Show all</h2>
+            </div>
+            <div class="grid grid-cols-6 gap-4">
+              <div class="relative w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02] songItems">
+                <img class="rounded-md" src="/cover/1.png" />
+                <i class="fa-solid fa-circle-play fa-2x text-[#65D46E] songItemPlay cursor-pointer absolute bottom-20 right-4 bottom-24" id="1"></i>
+                <div>
+                  <h2 class="text-base text-white songName">Despacito</h2>
+                  <h2 class="text-xs text-white/50 artist">Luis Fonsi</h2>
+                </div>
+              </div>
+
+              <!-- Repeat for songs 2–6 -->
+              <div class="relative w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02] songItems">
+                <img class="rounded-md" src="/cover/2.png" />
+                <i class="fa-solid fa-circle-play fa-2x text-[#65D46E] songItemPlay cursor-pointer absolute bottom-20 right-4 bottom-24" id="2"></i>
+                <div>
+                  <h2 class="text-base text-white songName">Beautiful Things</h2>
+                  <h2 class="text-xs text-white/50 artist">Benson Boone</h2>
+                </div>
+              </div>
+              <div class="relative w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02] songItems">
+                <img class="rounded-md" src="/cover/2.png" />
+                <i class="fa-solid fa-circle-play fa-2x text-[#65D46E] songItemPlay cursor-pointer absolute bottom-20 right-4 bottom-24" id="3"></i>
+                <div>
+                  <h2 class="text-base text-white songName">Beautiful Things</h2>
+                  <h2 class="text-xs text-white/50 artist">Benson Boone</h2>
+                </div>
+              </div>
+
+              <div class="relative w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02] songItems">
+                <img class="rounded-md" src="/cover/2.png" />
+                <i class="fa-solid fa-circle-play fa-2x text-[#65D46E] songItemPlay cursor-pointer absolute bottom-20 right-4 bottom-24" id="4"></i>
+                <div>
+                  <h2 class="text-base text-white songName">Beautiful Things</h2>
+                  <h2 class="text-xs text-white/50 artist">Benson Boone</h2>
+                </div>
+              </div>
+
+              <div class="relative w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02] songItems">
+                <img class="rounded-md" src="/cover/2.png" />
+                <i class="fa-solid fa-circle-play fa-2x text-[#65D46E] songItemPlay cursor-pointer absolute bottom-20 right-4 bottom-24" id="5"></i>
+                <div>
+                  <h2 class="text-base text-white songName">Beautiful Things</h2>
+                  <h2 class="text-xs text-white/50 artist">Benson Boone</h2>
+                </div>
+              </div>
+
+              <div class="relative w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02] songItems">
+                <img class="rounded-md" src="/cover/2.png" />
+                <i class="fa-solid fa-circle-play fa-2x text-[#65D46E] songItemPlay cursor-pointer absolute bottom-20 right-4 bottom-24" id="6"></i>
+                <div>
+                  <h2 class="text-base text-white songName">Beautiful Things</h2>
+                  <h2 class="text-xs text-white/50 artist">Benson Boone</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="text-2xl text-white font-medium">Popular artists</h2>
+              <h2 class="text-sm text-white/50 font-medium">Show all</h2>
+            </div>
+            <div class="grid grid-cols-6">
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/singer/1.jpeg" class="rounded-full" />
+                <div class="text-center">
+                  <h2 class="text-base text-white">Arjit Singh</h2>
+                  <h2 class="text-xs text-white/50">Artist</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/singer/2.jpeg" class="rounded-full" />
+                <div class="text-center">
+                  <h2 class="text-base text-white">Gracie Abrams</h2>
+                  <h2 class="text-xs text-white/50">Artist</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/singer/3.jpeg" class="rounded-full" />
+                <div class="text-center">
+                  <h2 class="text-base text-white">Cold Play</h2>
+                  <h2 class="text-xs text-white/50">Band</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/singer/4.jpeg" class="rounded-full" />
+                <div class="text-center">
+                  <h2 class="text-base text-white">Imagine Dragons</h2>
+                  <h2 class="text-xs text-white/50">Band</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/singer/5.jpeg" class="rounded-full" />
+                <div class="text-center">
+                  <h2 class="text-base text-white">Superstar</h2>
+                  <h2 class="text-xs text-white/50">Artist</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/singer/6.jpeg" class="rounded-full" />
+                <div class="text-center">
+                  <h2 class="text-base text-white">Lana Del Rey</h2>
+                  <h2 class="text-xs text-white/50">Artist</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Third Row -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="text-2xl text-white font-medium">Popular albums and singles</h2>
+              <h2 class="text-sm text-white/50 font-medium">Show all</h2>
+            </div>
+            <div class="grid grid-cols-6">
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-2 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/1.png" class="rounded-md" />
+                <div class="">
+                  <h2 class="text-base text-white">Despacito</h2>
+                  <h2 class="text-xs text-white/50">Luis Fonsi</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/2.png" class="rounded-md" />
+                <div class="">
+                  <h2 class="text-base text-white">Beautiful Things</h2>
+                  <h2 class="text-xs text-white/50">Benson Boone</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/3.png" class="rounded-md" />
+                <div class="">
+                  <h2 class="text-base text-white">Perfect</h2>
+                  <h2 class="text-xs text-white/50">Ed Sheeran</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/4.png" class="rounded-md" />
+                <div class="">
+                  <h2 class="text-base text-white">That's so true</h2>
+                  <h2 class="text-xs text-white/50">Gracie Abrams</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/5.png" class="rounded-md" />
+                <div class="">
+                  <h2 class="text-base text-white">Right Person Right Time</h2>
+                  <h2 class="text-xs text-white/50">Rachel Grae</h2>
+                </div>
+              </div>
+              <div class="w-full space-y-2 hover:bg-[#1F1F1F] p-3 rounded-lg cursor-pointer transition duration-200 hover:scale-[1.02]">
+                <img src="/cover/6.png" class="rounded-md" />
+                <div class="">
+                  <h2 class="text-base text-white">At My Worst</h2>
+                  <h2 class="text-xs text-white/50">Pink Sweats</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed bottom-0 left-0 w-full bg-black z-50 p-4 flex items-center items-center w-full justify-between">
+        <!-- Song Image and name -->
+        <div class="flex items-center space-x-4 w-1/4">
+          <img src="/cover/1.jpeg" id="coverImage" class="w-14 h-14" />
+          <div class="">
+            <h2 class="text-white text-sm" id="masterSongName">Human</h2>
+            <p class="text-white/70 text-xs" id="masterSongArtist">Rag'n Bone Man</p>
+          </div>
+        </div>
+
+        <!-- Player Icons -->
+        <div class="w-1/4">
+          <div class="flex items-center space-x-8 justify-center">
+            <div class=""><img src="/playbarIcon/1.png" class="w-4 h-4 cursor-not-allowed" /></div>
+            <div class=""><img src="/playbarIcon/2.png" class="w-4 h-4 cursor-pointer" id="previous" /></div>
+            <i class="fa-solid fa-circle-play fa-2x text-white cursor-pointer" id="masterPlay"></i>
+
+            <div class=""><img src="/playbarIcon/7.png" class="w-4 h-4 cursor-pointer" id="next" /></div>
+            <div class=""><img src="/playbarIcon/6.png" class="w-4 h-4 cursor-not-allowed" /></div>
+          </div>
+          <div class="flex items-center space-x-4 w-full">
+            <span class="text-white/50 text-xs">0.13</span>
+            <div class="w-96">
+              <input type="range" name="range" id="myProgressBar" value="0" class="h-1 w-full" min="0" value="0" max="100" />
+            </div>
+            <span class="text-white/50 text-xs">3.00</span>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4 w-1/4 justify-end">
+          <div class="">
+            <img src="/playbarIcon/3.png" class="w-4 h-4 cursor-not-allowed" />
+          </div>
+          <div class="">
+            <img src="/playbarIcon/10.png" class="w-4 h-4 cursor-not-allowed" />
+          </div>
+          <div class="">
+            <img src="/playbarIcon/8.png" class="w-4 h-4 cursor-not-allowed" />
+          </div>
+          <div class="">
+            <img src="/playbarIcon/9.png" class="w-4 h-4 cursor-not-allowed" />
+          </div>
+          <div class="">
+            <img src="/playbarIcon/12.png" class="w-4 h-4 cursor-not-allowed" />
+          </div>
+          <div class="">
+            <img src="/playbarIcon/11.png" class="w-4 h-4 cursor-not-allowed" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/script.js"></script>
+    <script src="https://kit.fontawesome.com/4edd8bfa26.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+  </body>
+</html>
