@@ -143,7 +143,7 @@ document.getElementById("previous").addEventListener("click", () => {
   } else {
     songIndex -= 1;
   }
-  audioElement.src = `songs/${songIndex}.mp3`;
+  audioElement.src = `songs/${songIndex + 0}.mp3`;
   masterSongName.innerText = songs[songIndex].songName;
   masterSongArtist.innerText = songs[songIndex].artist;
   coverImage.src = songs[songIndex].coverPath;
